@@ -1,0 +1,6 @@
+.wrapper {   
+    
+     display: grid;   
+      grid-template-columns: 10rem 10rem 10rem;
+      grid-template-rows:20rem 20rem;
+    }
