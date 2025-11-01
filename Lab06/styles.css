@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9fb;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #1a252f;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #ffb703;
+  outline: none;
+}
+
+.hero {
+  background-color: #f1f7f6;
+  padding: 50px;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.hero-img {
+  float: right;
+  width: 300px;
+  max-width: 100%;
+  margin-left: 20px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hero-text h1 {
+  font-size: 2em;
+  color: #1a252f;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #1a252f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #ffb703;
+  transform: translateY(-2px);
+}
+
+#menu {
+  background-color: #fff;
+  padding: 80px 5%;
+  text-align: center;
+}
+
+#menu h2 {
+  margin-bottom: 40px;
+  color: #1a252f;
+  font-size: 2em;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fdfdfd;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #1a252f;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.card p {
+  font-size: 0.95em;
+  margin-bottom: 8px;
+}
+
+.price {
+  color: #ffb703;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+#about {
+  padding: 60px 20px;
+  background-color: #eef2f7;
+  text-align: center;
+}
+
+#about h2 {
+  margin-bottom: 20px;
+  color: #1a252f;
+  font-size: 1.8em;
+}
+
+#about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+  color: #1a252f;
+  font-size: 1.8em;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #ffb703;
+  outline: none;
+}
+
+#contact button {
+  background-color: #1a252f;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover,
+#contact button:focus {
+  background-color: #ffb703;
+}
+
+footer {
+  background-color: #1a252f;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
