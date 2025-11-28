@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lazy Loading Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    img.lazy, img.loaded {
+      width: 500px;
+      height: 350px;
+      display: block;
+      margin: 40px auto;
+      background: #eee;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    img.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lazy Loading of Figma Screenshots</h1>
+
+  <!--loads normally -->
+  <img src="sc1.png" alt="Screenshot 1" class="loaded" style="opacity:1" />
+
+  <!-- lazy load -->
+  <img class="lazy" data-src="sc2.png" alt="Screenshot 2" />
+  <img class="lazy" data-src="sc3.png" alt="Screenshot 3" />
+  <img class="lazy" data-src="sc4.png" alt="Screenshot 4" />
+
+  <script>
+    function lazyLoad() {
+      const lazyImages = document.querySelectorAll('img.lazy');
+      lazyImages.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          img.classList.add('loaded');
+        }
+      });
+    }
+
+    document.addEventListener('scroll', lazyLoad);
+    window.addEventListener('resize', lazyLoad);
+    window.addEventListener('orientationchange', lazyLoad);
+    lazyLoad();
+  </script>
+
+</body>
+</html>
